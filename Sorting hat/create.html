@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="http://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet"/>
+        <link rel="stylesheet" href="style.css"/>
+        <title>SortingHat</title>
+    </head>
+    <body>       
+
+        <?php
+         include 'connect.php';    
+        ?>
+
+        <div id="background" style="background-image: url('images/hogwarts.jpg');">
+
+            <div class="createaccount" id="full-container">
+                
+                <h1>
+                    New Wizard/Witch
+                </h1>
+
+                <form class="form" method="POST" action="favorites.php">
+                    <div class="creds" id="name">
+                        <label class="lbl" for="firstname">
+                            Firstname:
+                        </label>
+                    <br>
+                        <input class="cred" type="text" id="firstname" name="firstname" placeholder="Fill in your first name" required/>
+
+                    <br>
+                        <label class="lbl" for="lastname">
+                            Lastname:
+                        </label>
+                    <br>
+                        <input class="cred" type="text" id="lastname" name="lastname" placeholder="Fill in your last name" required/>
+                    </div>
+
+                    <br>
+                    
+                    <div class="creds" id="age">
+                        <label class="lbl" for="Age">
+                            Your age:
+                        </label>
+                    <br>
+                        <input class="ageinput" type="number" id="age" name="age"/>
+                    </div>
+
+                    <br>
+                    <div class="creds" id="gender">
+                        <label class="lbl" for="Gender">
+                            Your gender:
+                        </label>
+                        <br>
+                        <input class="genderinput" type="radio" name="gender" value="Male"/>
+                        <label for="male"> Male </label>
+
+                        <input class="genderinput" type="radio" name="gender" value="Female"/>
+                        <label for="female"> Female </label>
+                    </div>
+
+                    <br>
+
+                    <div class="creds" id="prefH">
+                        <label class="lbl" for="prefH">
+                            Preferred house:
+                        </label>
+                    <br>
+                        <input type="radio" name="pref_H" value="Gryffindor">
+                        <label for="prefH"> Gryffindor </label><br>
+                        <input type="radio" name="pref_H" value="Slytherin">
+                        <label for="prefH"> Slytherin </label><br>
+                        <input type="radio" name="pref_H" value="Ravenclaw">
+                        <label for="prefH"> Ravenclaw </label><br>
+                        <input type="radio" name="pref_H" value="Hufflepuff">
+                        <label for="prefH"> Hufflepuff </label>
+
+                    </div>
+                    <br>
+                    <div class="creds" id="desc">
+                        <label class="lbl" for="desc">
+                            Select the value that you find most important:
+                        </label>
+                    <br>
+                        <input type="radio" name="des" value="Bravery"><label for="desc"> Bravery </label><br>
+                        <input type="radio" name="des" value="Intelligence"><label for="desc"> Intelligence </label><br>
+                        <input type="radio" name="des" value="Empathy"><label for="desc"> Empathy </label><br>
+                        <input type="radio" name="des" value="Ambition"><label for="desc"> Ambition </label>
+                    </div>
+
+                    <br>
+                    <input class="submitbuttons" type="submit" value="Send">
+                </form>
+            </div>
+            <img id="logo2" src="images/logo.png">
+        </div>
+    </body>
+</html>
